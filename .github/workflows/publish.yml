@@ -19,11 +19,8 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build
-        run: dotnet build --no-restore
-
       - name: Pack
-        run: dotnet pack --no-build -o out
+        run: dotnet pack -o out
 
       - name: Push
         run: dotnet nuget push "out/*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source https://nuget.pkg.github.com/MrBelix
