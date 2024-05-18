@@ -1,8 +1,8 @@
 name: Publish NuGet
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ main ]
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
         run: dotnet restore
 
       - name: Pack
-        run: dotnet pack -o out
+        run: dotnet pack --no-build -o out
 
       - name: Push
         run: dotnet nuget push "out/*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source https://nuget.pkg.github.com/MrBelix
