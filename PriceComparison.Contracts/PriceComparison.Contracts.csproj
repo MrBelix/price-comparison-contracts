@@ -5,6 +5,8 @@
         <Nullable>enable</Nullable>
         <PackageId>PriceComparison.Contracts</PackageId>
         <Version>0.0.3</Version>
+        <Authors>MrBelix</Authors>
+        <RepositoryUrl>https://github.com/MrBelix/price-comparison-contracts</RepositoryUrl>
     </PropertyGroup>
 
 </Project>
