@@ -23,4 +23,4 @@ jobs:
         run: dotnet pack -o out
 
       - name: Push
-        run: dotnet nuget push "out/*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source https://nuget.pkg.github.com/MrBelix
+        run: dotnet nuget push "out/*.nupkg" --api-key ${{ secrets.PACKAGES_API_KEY }} --source https://nuget.pkg.github.com/MrBelix
