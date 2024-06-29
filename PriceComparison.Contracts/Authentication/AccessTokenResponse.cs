@@ -1,6 +1,6 @@
 namespace PriceComparison.Contracts.Authentication;
 
-public record LoginResponse(
+public record AccessTokenResponse(
     string AccessToken,
     string RefreshToken,
     DateTimeOffset ExpiresAt);
